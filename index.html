@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <form action="https://bucs601.com/submit.php" method="POST">
+        <label for="firstName">First name: 
+            <!-- Here we use a pattern to ONLY allow a-z, A-Z, minimum 2 letters in the input. -->
+            <input type="text" id="firstName" name="firstName" required pattern="[a-zA-Z]{2,}">
+            <span class="error" aria-live="polite"></span>
+        </label>
+
+        <label for="lastName">Last name: 
+            <!-- Here we use a pattern to ONLY allow a-z, A-Z, minimum 2 letters in the input. -->
+            <input type="text" id="lastName" name="lastName" required pattern="[a-zA-Z]{2,}">
+            <span class="error" aria-live="polite"></span>
+        </label>
+
+        <label for="facilitator">Facilitator: 
+            <!-- Here we use a pattern to ONLY allow these four names in the input. -->
+            <input type="text" id="facilitator" name="facilitator" required pattern="(Josh|Fazil|Chris|Christian)"> 
+            <span class="error" aria-live="polite"></span>
+        </label>
+
+        <span class="radios">
+            <label for="radio1">
+                <input type="radio" id="radio1" name="radio1">
+                Radio 1 here
+            </label>
+
+            <label for="radio2">
+                <input type="radio" id="radio2" name="radio2">
+                Radio 2 here
+            </label>
+        </span>
+
+        <span class="checks">
+            <label for="check1">
+                <input type="checkbox" id="check1" name="check1">
+                Checkbox 1 here
+            </label>
+
+            <label for="check2">
+                <input type="checkbox" id="check2" name="check2">
+                Checkbox 2 here
+            </label>
+        </span>
+
+        <input type="submit" value="Submit">
+    </form>
+    <script src="valid.js"></script>
+</body>
+
+</html>
