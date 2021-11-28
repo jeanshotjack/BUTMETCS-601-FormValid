@@ -56,12 +56,20 @@ document.addEventListener("DOMContentLoaded", function () {
             event.preventDefault();
         }
       });
+
+      // Event listeners for radio buttons to change target (new tab or same tab) for form POST method
+      document.getElementById("newPage").addEventListener("click", function() {
+          form.setAttribute("target", "_blank");
+      });
+      document.getElementById("samePage").addEventListener("click", function() {
+        form.setAttribute("target", "");
+    });
 });
 
 // A function to display a custom error for invalid facil name input
 function showFacilError() {
     if (facil.validity.patternMismatch) {
-        facilError.innerText = "The facilitator name thee did input is not one of four on mine list.";
+        facilError.innerText = "The facilitator name thee hath't writ is not one of four on mine list";
     }
     facilError.className = "error active"; // change the classname to use the error active css
 
@@ -70,11 +78,11 @@ function showFacilError() {
 // A function to display a custom erorr for invalid first or last name input
 function showNameError() {
     if (firstName.validity.patternMismatch) {
-        fnError.innerText = "Your input must be at least 2 letters long and contain only a-z (uppercase or lowercase)";
+        fnError.innerText = "Thine input wilt beest at least two letters long and enwheel only letter characters.";
         fnError.className = "error active";
     }
     else if (lastName.validity.patternMismatch) {
-        lnError.innerText = "Your input must be at least 2 letters long and contain only a-z (uppercase or lowercase)";
+        lnError.innerText = "Thine input wilt beest at least two letters long and enwheel only letter characters.";
         lnError.className = "error active";
     }
     
