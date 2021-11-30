@@ -1,11 +1,11 @@
 // Create constants for all the elements we need to use in validation 
 const form  = document.getElementsByTagName("form")[0];
 const firstName = document.getElementById("firstName");
-const fnError = document.querySelector("#firstName + span.error");
+const fnError = document.querySelector("#firstName + div.error");
 const lastName = document.getElementById("lastName");
-const lnError = document.querySelector("#lastName + span.error");
+const lnError = document.querySelector("#lastName + div.error");
 const facil = document.getElementById("facilitator");
-const facilError = document.querySelector("#facilitator + span.error");
+const facilError = document.querySelector("#facilitator + div.error");
 
 // DOM is loaded and ready
 document.addEventListener("DOMContentLoaded", function () {
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
 
-      // Event listeners for radio buttons to change target (new tab or same tab) for form POST method
+      // Event listeners for radio buttons to change target (new tab or same tab) for form POST method on checked
       document.getElementById("newPage").addEventListener("click", function() {
           form.setAttribute("target", "_blank");
       });
@@ -81,7 +81,7 @@ function showNameError() {
         fnError.innerText = "Thine input wilt beest at least two letters long and enwheel only letter characters.";
         fnError.className = "error active";
     }
-    else if (lastName.validity.patternMismatch) {
+    if (lastName.validity.patternMismatch) {
         lnError.innerText = "Thine input wilt beest at least two letters long and enwheel only letter characters.";
         lnError.className = "error active";
     }

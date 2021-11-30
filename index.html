@@ -21,19 +21,19 @@
             <label for="firstName">Given name:
                 <!-- Here we use a pattern to ONLY allow a-z, A-Z, minimum 2 letters in the input. -->
                 <input type="text" id="firstName" name="firstName" required pattern="[a-zA-Z]{2,}">
-                <span class="error" aria-live="polite"></span>
+                <div class="error" aria-live="polite"></div>
             </label>
 
             <label for="lastName">Family name:
                 <!-- Here we use a pattern to ONLY allow a-z, A-Z, minimum 2 letters in the input. -->
                 <input type="text" id="lastName" name="lastName" required pattern="[a-zA-Z]{2,}">
-                <span class="error" aria-live="polite"></span>
+                <div class="error" aria-live="polite"></div>
             </label>
 
             <label for="facilitator">Facilitator:
                 <!-- Here we use a pattern to ONLY allow these four names in the input. -->
                 <input type="text" id="facilitator" name="facilitator" required pattern="(Josh|Fazil|Chris|Christian)">
-                <span class="error" aria-live="polite"></span>
+                <div class="error" aria-live="polite"></div>
             </label>
 
             <span class="radios">
@@ -49,14 +49,15 @@
             </span>
 
             <span class="checks">
+                I am a...
                 <label for="check1">
                     <input type="checkbox" id="check1" name="check1">
-                    Checkbox 1 here
+                    Serf
                 </label>
 
                 <label for="check2">
                     <input type="checkbox" id="check2" name="check2">
-                    Checkbox 2 here
+                    Scholar
                 </label>
             </span>
 
