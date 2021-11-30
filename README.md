@@ -1,4 +1,4 @@
-# Shakespearean Client-Side Form Validation
+# Shakespearean/Medieval Client-Side Form Validation
 A small form validation project created by Jean Shalenkova for CS601 at Boston University, 2021.
 
 ## Concept
